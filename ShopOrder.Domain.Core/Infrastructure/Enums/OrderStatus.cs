@@ -1,12 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿// Ignore Spelling: Enums
 
 namespace ShopOrder.Domain.Core.Infrastructure.Enums
 {
-    internal class OrderStatus
+    public enum OrderStatus
     {
+        New = 1,
+        Processing,
+        Completed
     }
 }
