@@ -6,4 +6,15 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.8" />
+    <PackageReference Include="System.Data.SqlClient" Version="4.8.5" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ShopOrder.Domain.Core\ShopOrder.Domain.Core.csproj" />
+    <ProjectReference Include="..\ShopOrder.Domain.Interfaces\ShopOrder.Domain.Interfaces.csproj" />
+    <ProjectReference Include="..\ShopOrder.Services.Interfaces\ShopOrder.Services.Interfaces.csproj" />
+  </ItemGroup>
+
 </Project>
