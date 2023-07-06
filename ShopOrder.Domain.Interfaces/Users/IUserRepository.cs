@@ -1,12 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using ShopOrder.Domain.Core.Models.Users;
 
 namespace ShopOrder.Domain.Interfaces.Users
 {
-    internal interface IUserRepository
+    public interface IUserRepository
     {
+        Task<bool> CheckIfSameEmailExistsAsync(string email);
+        Task<User?> CreateUserAsync(User user);
+        Task<User?> UpdateUserAsync(int id, User user);
+        Task<bool> DeleteUserAsync(int id);
+        Task<User?> GetUserAsync(int id);
+        Task<IEnumerable<User>> GetUsersAsync();
+        Task<User?> GetUserWithOrdersAsync(int id);
     }
 }

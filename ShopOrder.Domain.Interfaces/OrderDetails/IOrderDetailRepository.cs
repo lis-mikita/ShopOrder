@@ -1,12 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using ShopOrder.Domain.Core.Models.OrderDetails;
 
 namespace ShopOrder.Domain.Interfaces.OrderDetails
 {
-    internal interface IOrderDetailRepository
+    public interface IOrderDetailRepository
     {
+        Task<OrderDetail?> CreateOrderDetailAsync(OrderDetail orderDetail);
+        Task<OrderDetail?> UpdateOrderDetailAsync(int id, OrderDetail orderDetail);
+        Task<bool> DeleteOrderDetailAsync(int id);
+        Task<OrderDetail?> GetOrderDetailAsync(int id);
+        Task<IEnumerable<OrderDetail>> GetOrderDetailsAsync();
+        Task<bool> CheckOrderExistsAsync(int id);
     }
 }
