@@ -11,4 +11,9 @@
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\ShopOrder.Domain.Core\ShopOrder.Domain.Core.csproj" />
+    <ProjectReference Include="..\ShopOrder.Services.Interfaces\ShopOrder.Services.Interfaces.csproj" />
+  </ItemGroup>
+
 </Project>
