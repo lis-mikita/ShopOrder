@@ -18,6 +18,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\ShopOrder.Domain.Core\ShopOrder.Domain.Core.csproj" />
+    <ProjectReference Include="..\ShopOrder.Domain.Interfaces\ShopOrder.Domain.Interfaces.csproj" />
   </ItemGroup>
 
 </Project>
