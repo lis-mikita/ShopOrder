@@ -1,12 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using ShopOrder.Domain.Core.Models.OrderDetails;
 
 namespace ShopOrder.Domain.Core.Messages.OrderDetails
 {
-    internal class OrderDetailResponse
+    public class OrderDetailResponse : BaseResponse
     {
+        public OrderDetail? OrderDetail { get; set; }
     }
 }

@@ -1,12 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using ShopOrder.Domain.Core.Infrastructure.Enums;
 
 namespace ShopOrder.Domain.Core.Messages.Orders
 {
-    internal class OrderStatusResponse
+    public class OrderStatusResponse : BaseResponse
     {
+        public OrderStatus? OrderStatus { get; set; }
     }
 }

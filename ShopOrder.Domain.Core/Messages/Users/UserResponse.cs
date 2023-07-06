@@ -1,12 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using ShopOrder.Domain.Core.Models.Users;
 
 namespace ShopOrder.Domain.Core.Messages.Users
 {
-    internal class UserResponse
+    public class UserResponse : BaseResponse
     {
+        public User? User { get; set; }
     }
 }
