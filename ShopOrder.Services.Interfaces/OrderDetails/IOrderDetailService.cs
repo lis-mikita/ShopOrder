@@ -1,12 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Microsoft.AspNetCore.Mvc.ModelBinding;
+using ShopOrder.Domain.Core.Messages;
+using ShopOrder.Domain.Core.Messages.OrderDetails;
+using ShopOrder.Domain.Core.Models.OrderDetails;
 
 namespace ShopOrder.Services.Interfaces.OrderDetails
 {
-    internal interface IOrderDetailService
+    public interface IOrderDetailService
     {
+        Task<OrderDetailResponse> CreateOrderDetailAsync(OrderDetail orderDetail, ModelStateDictionary modelState);
+        Task<OrderDetailResponse> GetOrderDetailAsync(int id);
+        Task<OrderDetailResponse> UpdateOrderDetailAsync(int id, OrderDetail orderDetail, ModelStateDictionary modelState);
+        Task<BaseResponse> DeleteOrderDetailAsync(int id);
+        Task<OrderDetailsResponse> GetOrderDetailsAsync();
     }
 }
