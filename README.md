@@ -27,7 +27,7 @@ To get started with the ShopOrder project, follow these steps:
 
 ## API Documentation
 
-The ShopOrder project provides an API for managing users, orders, and order detail. For detailed API documentation, refer to the [API Documentation](https://github.com/lis-mikita/ShopOrder/output.json) file.
+The ShopOrder project provides an API for managing users, orders, and order detail. For detailed API documentation, refer to the [API Documentation](https://github.com/lis-mikita/ShopOrder/) file.
 
 ## Contributing
 
