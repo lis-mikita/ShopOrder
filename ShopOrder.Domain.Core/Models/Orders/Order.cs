@@ -10,10 +10,8 @@ namespace ShopOrder.Domain.Core.Models.Orders
     public class Order
     {
         [JsonIgnore]
-        [Required]
         public int OrderId { get; set; }
 
-        [Required]
         public int UserId { get; set; }
         public DateTime? OrderDate { get; set; }
 

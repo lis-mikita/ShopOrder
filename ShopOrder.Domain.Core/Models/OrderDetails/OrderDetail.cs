@@ -8,13 +8,10 @@ namespace ShopOrder.Domain.Core.Models.OrderDetails
     public class OrderDetail
     {
         [JsonIgnore]
-        [Required]
         public int OrderDetailId { get; set; }
 
-        [Required]
         public int OrderId { get; set; }
 
-        [Required]
         [MaxLength(30, ErrorMessage = Validation.OrderDetails.ProductNameMaxLength)]
         public string? ProductName { get; set; }
 

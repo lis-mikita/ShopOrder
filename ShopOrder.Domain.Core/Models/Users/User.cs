@@ -8,7 +8,6 @@ namespace ShopOrder.Domain.Core.Models.Users
     public class User
     {
         [JsonIgnore]
-        [Required]
         public int UserId { get; set; }
 
         [MaxLength(30, ErrorMessage = Validation.Users.FirstNameMaxLength)]
@@ -17,12 +16,10 @@ namespace ShopOrder.Domain.Core.Models.Users
         [MaxLength(30, ErrorMessage = Validation.Users.LastNameMaxLength)]
         public string? LastName { get; set; }
 
-        [Required]
         [MaxLength(30, ErrorMessage = Validation.Users.EmailMaxLength)]
         [EmailAddress(ErrorMessage = Validation.Users.EmailError)]
         public string? Email { get; set; }
 
-        [Required]
         [MaxLength(30, ErrorMessage = Validation.Users.PasswordMaxLength)]
         [MinLength(8, ErrorMessage = Validation.Users.PasswordMinLength)]
         public string? Password { get; set; }

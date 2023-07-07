@@ -20,10 +20,19 @@ namespace ShopOrder.Infrastructure.Data
         {
             modelBuilder.Entity<User>(entity =>
             {
-                entity.HasKey(e => e.UserId);
+                entity.HasKey(u => u.UserId);
 
-                entity.HasIndex(e => e.Email)
+                entity.HasIndex(u => u.Email)
                     .IsUnique();
+
+                entity.Property(u => u.UserId)
+                    .IsRequired();
+
+                entity.Property(u => u.Email)
+                    .IsRequired();
+
+                entity.Property(u => u.Password)
+                    .IsRequired();
             });
 
             modelBuilder.Entity<Order>(entity =>
@@ -34,6 +43,12 @@ namespace ShopOrder.Infrastructure.Data
                     .WithMany(u => u.Orders)
                     .HasForeignKey(o => o.UserId)
                     .OnDelete(DeleteBehavior.Cascade);
+
+                entity.Property(o => o.OrderId)
+                    .IsRequired();
+
+                entity.Property(o => o.UserId)
+                    .IsRequired();
             });
 
             modelBuilder.Entity<OrderDetail>(entity =>
@@ -47,6 +62,15 @@ namespace ShopOrder.Infrastructure.Data
 
                 entity.Property(od => od.Subtotal)
                     .HasComputedColumnSql("[Quantity] * [Price]");
+
+                entity.Property(od => od.OrderDetailId)
+                    .IsRequired();
+
+                entity.Property(od => od.OrderId)
+                    .IsRequired();
+
+                entity.Property(od => od.ProductName)
+                    .IsRequired();
             });
         }
 
