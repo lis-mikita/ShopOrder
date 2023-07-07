@@ -18,7 +18,7 @@ ShopOrder is a sample e-commerce application for managing orders.
 
 To get started with the ShopOrder project, follow these steps:
 
-1. Clone the repository: `git clone https://github.com/lis-mikita/shop-order.git`
+1. Clone the repository: `git clone https://github.com/lis-mikita/ShopOrder.git`
 2. Navigate to the project directory: `cd ShopOrder`
 3. Restore dependencies: `dotnet restore`
 4. Build the project: `dotnet build`
