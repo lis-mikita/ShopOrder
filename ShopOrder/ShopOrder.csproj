@@ -8,11 +8,15 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="7.0.3" />
+    <PackageReference Include="Serilog.Extensions.Logging.File" Version="3.0.0" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\ShopOrder.Domain.Core\ShopOrder.Domain.Core.csproj" />
+    <ProjectReference Include="..\ShopOrder.Domain.Interfaces\ShopOrder.Domain.Interfaces.csproj" />
+    <ProjectReference Include="..\ShopOrder.Infrastructure.Business\ShopOrder.Infrastructure.Business.csproj" />
+    <ProjectReference Include="..\ShopOrder.Infrastructure.Data\ShopOrder.Infrastructure.Data.csproj" />
     <ProjectReference Include="..\ShopOrder.Services.Interfaces\ShopOrder.Services.Interfaces.csproj" />
   </ItemGroup>
 
