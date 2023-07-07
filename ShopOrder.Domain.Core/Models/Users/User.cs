@@ -1,11 +1,13 @@
 ﻿using ShopOrder.Domain.Core.Models.Orders;
 using System.ComponentModel.DataAnnotations;
+using System.Text.Json.Serialization;
 using static ShopOrder.Domain.Core.Infrastructure.Constants;
 
 namespace ShopOrder.Domain.Core.Models.Users
 {
     public class User
     {
+        [JsonIgnore]
         [Required]
         public int UserId { get; set; }
 

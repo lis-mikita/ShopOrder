@@ -30,6 +30,13 @@ namespace ShopOrder.Utilities
             services.AddScoped<IOrderDetailRepository, OrderDetailRepository>();
             services.AddScoped<IOrderDetailService, OrderDetailService>();
 
+            // Serialization
+            services.AddControllers().AddNewtonsoftJson(options =>
+            {
+                options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore;
+                options.SerializerSettings.NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore;
+            });
+
             // Swagger
             services.AddEndpointsApiExplorer();
             services.AddSwaggerGen();

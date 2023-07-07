@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.Text.Json.Serialization;
 using ShopOrder.Domain.Core.Infrastructure.Enums;
 using ShopOrder.Domain.Core.Models.OrderDetails;
 using ShopOrder.Domain.Core.Models.Users;
@@ -8,6 +9,7 @@ namespace ShopOrder.Domain.Core.Models.Orders
 {
     public class Order
     {
+        [JsonIgnore]
         [Required]
         public int OrderId { get; set; }
 
@@ -22,6 +24,7 @@ namespace ShopOrder.Domain.Core.Models.Orders
         [MaxLength(60, ErrorMessage = Validation.Orders.DeliveryAddressMaxLength)]
         public string? DeliveryAddress { get; set; }
 
+        [JsonIgnore]
         public virtual User? User { get; set; }
         public virtual ICollection<OrderDetail> OrderDetails { get; set; } = new List<OrderDetail>();
     }
